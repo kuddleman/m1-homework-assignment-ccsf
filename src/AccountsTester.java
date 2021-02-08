@@ -18,8 +18,8 @@ public class AccountsTester {
         Account savings2 = new SavingsAccount("owner7", "owner8", 45570, 400);
 
         SavingsAccount mySavings = (SavingsAccount) savings2;
-//        mySavings.withdraw(50);
-//        mySavings.deposit(100);
+        mySavings.withdraw(50);
+        mySavings.deposit(100);
 
         Account moneyMarket1 = new MoneyMarketAccount("owner8", 45571, 50000);
         Account moneyMarket2 = new MoneyMarketAccount("owner9", "owner10", 45572, 30000);
