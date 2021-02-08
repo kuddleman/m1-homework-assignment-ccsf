@@ -1,18 +1,18 @@
-public class Accounts {
+public class Account {
     private String name1;
     private String name2;
     private int accountNumber;
     private int initialDeposit;
 
     // constructor for single owner account
-    public Accounts(String firstName, int anAccountNumber, int anInitialDeposit) {
+    public Account(String firstName, int anAccountNumber, int anInitialDeposit) {
         this.name1 = firstName;
         this.accountNumber = anAccountNumber;
         this.initialDeposit = anInitialDeposit;
     }
 
     // constructor for joint-owner account
-    public Accounts(String firstName, String secondName, int anAccountNumber, int anInitialDeposit) {
+    public Account(String firstName, String secondName, int anAccountNumber, int anInitialDeposit) {
         this.name1 = firstName;
         this.name2 = secondName;
         this.accountNumber = anAccountNumber;
@@ -34,6 +34,14 @@ public class Accounts {
 
     public int getInitialDeposit() {
         return initialDeposit;
+    }
+
+    @Override
+    public String toString() {
+        if (this.name2 == null) {
+          return "Account owner: " + name1 + "\nAccount Number: " + accountNumber + "\nInitial Deposit " + initialDeposit ;
+        }
+        return "Account owners: " + name1 + " and " + name2 + "\nAccount Number: " + accountNumber + "\nInitial Deposit " + initialDeposit ;
     }
 
 
