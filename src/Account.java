@@ -44,6 +44,21 @@ public class Account {
         return "Account owners: " + name1 + " and " + name2 + "\nAccount Number: #" + accountNumber + "\nInitial Deposit: $" + initialDeposit ;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Account) {
+            Account otherAccount = (Account) obj;
+            int otherAccountNumber = otherAccount.accountNumber;
+            String otherName1 = otherAccount.name1;
+
+            if(accountNumber == otherAccountNumber && name1.equalsIgnoreCase(otherName1)) {
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
 
 
 }
