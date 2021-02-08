@@ -41,7 +41,7 @@ public class Account {
         if (this.name2 == null) {
           return "Account owner: " + name1 + "\nAccount Number: " + accountNumber + "\nInitial Deposit " + initialDeposit ;
         }
-        return "Account owners: " + name1 + " and " + name2 + "\nAccount Number: " + accountNumber + "\nInitial Deposit " + initialDeposit ;
+        return "Account owners: " + name1 + " and " + name2 + "\nAccount Number: #" + accountNumber + "\nInitial Deposit: $" + initialDeposit ;
     }
 
 
