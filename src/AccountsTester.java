@@ -4,6 +4,35 @@ public class AccountsTester {
        Account a2 = new Account("owner1", "owner2", 45567, 10000);
         //System.out.println(a1.toString());
        // System.out.println(a2.toString());
-        System.out.println(a1.equals(a2));
+        //System.out.println(a1.equals(a2));
+        Account checking1 = new CheckingAccount("owner4", 45568, 50);
+        Account checking2 = new CheckingAccount("owner5", 45569, 100);
+
+        CheckingAccount myChecking = (CheckingAccount) checking1;
+//        myChecking.withdraw(50);
+//        myChecking.deposit(100);
+
+        Account savings1 = new SavingsAccount("owner6", 45570, 200);
+        Account savings2 = new SavingsAccount("owner7", "owner8", 45570, 400);
+
+        SavingsAccount mySavings = (SavingsAccount) savings2;
+//        mySavings.withdraw(50);
+//        mySavings.deposit(100);
+
+        Account MoneyMarket1 = new MoneyMarketAccount("owner8", 45571, 50000);
+        Account MoneyMarket2 = new MoneyMarketAccount("owner9", "owner10", 45572, 30000);
+
+        Account cd1 = new CertificateOfDeposit("owner10", 45572, 40000, "July 19, 2022");
+        Account cd2 = new CertificateOfDeposit("owner11", "owner12", 45573, 500000, "December 25, 2025");
+
+        CertificateOfDeposit myCert = (CertificateOfDeposit) cd1;
+        myCert.extendTermOfCd("January 1, 2030");
+        System.out.println(myCert.getEndDate());
+
+
+       // System.out.println(cd1.toString());
+
+
+
     }
 }
